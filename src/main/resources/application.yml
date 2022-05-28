@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: micronautIssue
+
+datasources:
+  default:
+    url: ${DB_JDBC_URL:`jdbc:h2:mem:default;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE`}
+    username: ${POSTGRES_USER:sa}
+    password: ${POSTGRES_PASSWORD:}
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+
+netty:
+  default:
+    allocator:
+      max-order: 3
